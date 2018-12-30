@@ -25,7 +25,7 @@ MEDIA_DIR = os.path.join(BASE_DIR, "media")
 SECRET_KEY = 'd368bt7o4_t11twlu^m!e1-y@p@ufjpwy=-*r7wa)#wi3q8u=4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['patrickmillerson.pythonanywhere.com',]
 
@@ -132,8 +132,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR,
+    '/var/www/static/',
 ]
-
+STATIC_ROOT = "/var/www/example.com/static/"
 # MEDIA
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
